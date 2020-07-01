@@ -12,7 +12,7 @@ function addCompteEpargne($num_compte, $agence_id, $cle_rip, $frais_ouverture, $
    function addCompteCourant($num_compte, $agence_id, $cle_rip, $agio, $date_ouverture, $type_compte_id, $client_id){
 
         $sql = "INSERT INTO compte(num_compte, agence_id, cle_rip, agio,date_ouverture,type_compte_id,client_id)
-        VALUES('$num_compte', '$agence_id', '$agence_id', '$cle_rip', '$agio', '$type_compte_id', '$client_id')";
+        VALUES('$num_compte', '$agence_id', '$cle_rip', '$agio','$date_ouverture','$type_compte_id', '$client_id')";
        return executeSQL($sql); 
                         
        }
@@ -21,7 +21,7 @@ function addCompteEpargne($num_compte, $agence_id, $cle_rip, $frais_ouverture, $
         function addCompteBloque($num_compte, $agence_id, $cle_rip, $frais_ouverture, $date_ouverture, $date_fermuture, $type_compte_id, $client_id){
 
                 $sql = "INSERT INTO compte(num_compte, agence_id, cle_rip, frais_ouverture,date_ouverture,date_fermuture, type_compte_id,client_id)
-                VALUES('$num_compte', '$agence_id', '$agence_id', '$cle_rip', '$frais_ouverture', '$date_fermuture', '$type_compte_id', '$client_id')";
+                VALUES('$num_compte', '$agence_id', '$cle_rip', '$frais_ouverture','$date_ouverture', '$date_fermuture', '$type_compte_id', '$client_id')";
                return executeSQL($sql); 
                                 
                }
