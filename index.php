@@ -27,7 +27,7 @@
             $listeTypeCompte = getListTypeComte();
             
 
-            $today = date("d.m.y"); 
+            $today = date("d/m/y"); 
             $numcompte = 'Cmpt-'.$today; 
             $cleRip = 'Cle-rip-'.$today; 
 

@@ -11,9 +11,9 @@
 if(isset($_GET['ok'])){
     if($_GET['ok'] == 1){
         
-        echo "<div style='margin-top: 50px; font-size: 35px; color = #02a1a1;'>Donnéé ajoute</div>";
+        echo "<div style='margin-top: 410px; font-size: 35px; color:#02a1a1; margin-left: 130px;'>Compte inseré avec succès</div>";
     }else{
-        echo "<div style='margin-top: 50px; font-size: 35px; color = red;'>Erreur d'insertion</div>";
+        echo "<div style='margin-top: 50px; font-size: 35px; color:red; margin-left: 130px;'>Erreur d'insertion</div>";
  
     }
 }
@@ -36,7 +36,7 @@ if(isset($_GET['ok'])){
                                 //on va parcourir la liste de typeclient envoye au niveau de l'index
                                 while($tab = mysqli_fetch_row($listeClient)){
                                 
-                                    echo"<option value='$tab[0]'>$tab[1]</option>";
+                                    echo"<option value='$tab[0]'>$tab[2] $tab[1]</option>";
                                 }          
                             ?>
                         </select>
@@ -65,11 +65,11 @@ if(isset($_GET['ok'])){
                     </div>
                     <div>   
                         <label for="">Date d'ouverture</label>
-                        <?php echo"<input type='text' name='date_ouverture' id='date' value='$today' readonly />";?>                      
+                        <?php echo"<input type='text' name='date_ouverture' id='date' value='$today' disabled />";?>                      
                     </div>
                     <div>
                         <label for="">Numero compte</label>
-                        <?php echo"<input type='text' name='num_compte' id='numCompte' value='$numcompte' readonly />";?>        
+                        <?php echo"<input type='text' name='num_compte' id='numCompte' value='$numcompte' disabled />";?>        
                     </div>
                     <div>
                         <label for="">Numero agence</label>
@@ -87,7 +87,7 @@ if(isset($_GET['ok'])){
                     </div>
                     <div>
                         <label for="">Cle rip</label>
-                        <?php echo"<input type='text' name='cle_rip' id='cleRip' value='$cleRip' readonly/>";?>
+                        <?php echo"<input type='text' name='cle_rip' id='cleRip' value='$cleRip' disabled />";?>
                     </div>
 
                     <div class="dfermuture" id="dfermuture">

@@ -11,13 +11,14 @@
 if(isset($_GET['ok'])){
     if($_GET['ok'] == 1){
         
-        echo "<div style='margin-top: 50px; font-size: 35px; color = #02a1a1;'>Donnéé ajoute</div>";
+        echo "<div style='margin-top: 410px; font-size: 35px; color:#02a1a1; margin-left: 130px;'>Client inseré avec succès</div>";
     }else{
-        echo "<div style='margin-top: 50px; font-size: 35px; color = red;'>Erreur d'insertion</div>";
+        echo "<div style='margin-top: 50px; font-size: 35px; color:red; margin-left: 130px;'>Erreur d'insertion</div>";
  
     }
 }
 ?>
+ 
  
     <div class="contenue">
         <div class="error" id="message_error"></div>
@@ -47,7 +48,6 @@ if(isset($_GET['ok'])){
                         <label for="">Nom</label>
                         <input type="text" name="nom" id="nom" placeholder="Nom.....">
                     </div>
-
                     <div>
                         <label for="">Prenom</label>
                         <input type="text" name="prenom" id="prenom" placeholder="Prenom.....">
@@ -72,7 +72,6 @@ if(isset($_GET['ok'])){
                         <label for="">Liste employeur:</label>
                         <select name="employeur_id" id="employeur_id">
                             <option value="">Votre entreprise</option>
-
                             <?php
                                 //on va parcourir la liste des entreprise envoye au niveau de l'index
                                 while($tab = mysqli_fetch_row($listeEmployeur)){
@@ -101,7 +100,6 @@ if(isset($_GET['ok'])){
                         <label for="">Profession</label>
                         <input type="text" name="profession" id="profession" placeholder="Profession....."> 
                     </div>
-                  
                     <div id="ninea">
                         <label for="">Ninea</label>
                         <input type="text" name="numIdentification" id="numIdentification" placeholder="Num identification.....">
@@ -130,5 +128,5 @@ if(isset($_GET['ok'])){
             </fieldset>    
         </form>  
     </div>
-</body>
+    </body>
 </html>
