@@ -18,6 +18,19 @@
             break;
 
             case 'compte/add';
+
+            require_once 'model/DB.php';
+            require_once 'model/CompteDB.php';
+            require_once 'model/ClientDB.php';
+            $listeAgence = getListAgence();
+            $listeClient = getListClient();
+            $listeTypeCompte = getListTypeComte();
+            
+
+            $today = date("d.m.y"); 
+            $numcompte = 'Cmpt-'.$today; 
+            $cleRip = 'Cle-rip-'.$today; 
+
             require_once 'view/compte/add.php';
             break;
 

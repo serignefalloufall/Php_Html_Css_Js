@@ -15,8 +15,13 @@
     function executeSQL($sql){
         
        $connexion = getConnexion();
-
-        return mysqli_query($connexion, $sql);
+      return mysqli_query($connexion, $sql);
+     if(mysqli_query($connexion, $sql)) {
+       echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+        
     }
 
 

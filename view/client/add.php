@@ -86,7 +86,6 @@ if(isset($_GET['ok'])){
 
                 </div>
 
-                
             </fieldset> 
             
             <fieldset class="fieldset" id="emp">
@@ -95,7 +94,7 @@ if(isset($_GET['ok'])){
 
                     <div>
                         <label for="">Salaire</label>
-                        <input type="text" name="salaire" id="salaire" placeholder="Salaire.....">
+                        <input type="text" name="salaire" id="salaire" placeholder="Salaire....." placeholder="salaire">
                     </div>
 
                     <div>

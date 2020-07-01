@@ -105,50 +105,40 @@ label{
     text-transform: capitalize;
     
     }
+ .btnRechercher{
+
+        border: 3px solid #02a1a1;
+        width: 500px;   
+        height: 50px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        border: 2px solid #02a1a1;
+        background: none;
+        color: #02a1a1;
+        border-radius: 40px;
+        font-weight: 900;
+        text-transform: capitalize;
+        
+        }    
+
+   
+
+    
     /*
     pour cacher les radio par defaut
     */
     
     input[type="date"]{
-        outline: none;
         font-size: 18px;
         width: 200px;
         float: right;
     }
     
     
-    .search-box:hover > .search-txt{
-        width: 320px;
-        padding: 5px 6px;
-    }
-
-    .search-box:hover > .search-btn{
-      background: white;
-    }
-
-    .search-btn{
-        color: #2F3640;
-        float: center;
-        width: 90px;
-        height: 40px;
-        border-radius: 40px;
-        background: #02a1a1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-      
-    }
-    .search-txt{
-        border-radius: 40px;
-        outline: none;
-        float: center;
-        color: white;
-        font-size: 16px;
-        transition: 0.4s;
-        line-height: 40px;
-        
-    }
+   
+   
+   
     .frais{
         display: none;
         
@@ -156,9 +146,8 @@ label{
        .agio{
         display: none;
        }
+       .dfermuture{
+        display: none;
+       }
        
-    select{
-        font-size: 18px;
-        width: 200px;
-        float: right;
-    }
+   

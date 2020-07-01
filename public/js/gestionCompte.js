@@ -60,16 +60,17 @@ function myFunction() {
     var divFrais = document.getElementById("frais");
     var divAgio = document.getElementById("agio");
 
-    if(typeCompte === "epargne"){
+    if(typeCompte === '1'){
         divFrais.style.display = "block";
         divAgio.style.display = "none";
     }
-    if(typeCompte === "courant"){
+    if(typeCompte === '2'){
         divFrais.style.display = "none";
         divAgio.style.display = "block";
       }
-      if(typeCompte === "bloque"){
+      if(typeCompte === '3'){
         divFrais.style.display = "block";
+        dfermuture.style.display = "block";
         divAgio.style.display = "none";
       }
 

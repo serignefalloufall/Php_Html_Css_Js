@@ -14,9 +14,8 @@
 
 
 function verifTypeClient(){
-    var typeClient = document.getElementById("type_client_id").value;
-
-    if (typeClient === '6') {
+    var typeClient = document.getElementById("type_client_id");
+    if(typeClient.value === '6') {
          //alert("ok"); 6 represente type client pysique salarie
          alert("Veuillez reseigner tous les champs !!!"); 
          var divEmp = document.getElementById("listeEmployeur");
@@ -36,7 +35,7 @@ function verifTypeClient(){
          document.getElementById("adresseemployeur").style.display = "none";
 
          
-      } else if (typeClient === '7') {
+      } else if(typeClient === '7') {
 
         var divEmp = document.getElementById("listeEmployeur");
         divEmp.style.display = "none";
