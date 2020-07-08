@@ -65,11 +65,11 @@ if(isset($_GET['ok'])){
                     </div>
                     <div>   
                         <label for="">Date d'ouverture</label>
-                        <?php echo"<input type='text' name='date_ouverture' id='date' value='$today' disabled />";?>                      
+                        <?php echo"<input type='text' name='date_ouverture' id='date' value='$today' readonly/>";?>                      
                     </div>
                     <div>
                         <label for="">Numero compte</label>
-                        <?php echo"<input type='text' name='num_compte' id='numCompte' value='$numcompte' disabled />";?>        
+                        <?php echo"<input type='text' name='num_compte' id='numCompte' value='$numcompte' readonly/>";?>        
                     </div>
                     <div>
                         <label for="">Numero agence</label>
@@ -87,7 +87,7 @@ if(isset($_GET['ok'])){
                     </div>
                     <div>
                         <label for="">Cle rip</label>
-                        <?php echo"<input type='text' name='cle_rip' id='cleRip' value='$cleRip' disabled />";?>
+                        <?php echo"<input type='text' name='cle_rip' id='cleRip' value='$cleRip' readonly />";?>
                     </div>
 
                     <div class="dfermuture" id="dfermuture">
