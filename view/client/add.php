@@ -34,12 +34,17 @@ if(isset($_GET['ok'])){
                             <option value="">Choisir un type de client</option>
 
                             <?php
-                                //on va parcourir la liste de typeclient envoye au niveau de l'index
-                                while($tab = mysqli_fetch_row($listeTypeClient)){
-                                
-                                    echo"<option value='$tab[0]'>$tab[1]</option>";
-                                }          
+                            //  var_dump($listeTypeClient);
+                            //  die();
+                             
+                                foreach($listeTypeClient as $l_typeClient){   
                             ?>
+                                   
+                                //on va parcourir la liste de typeclient envoye au niveau de l'index
+                                <option value="<?= $l_typeClient->id ?>"><?= $l_typeClient->libelle ?> </option>
+                            <?php      
+                                }          
+                               ?>
                         </select>
 
                     </div>
@@ -73,12 +78,15 @@ if(isset($_GET['ok'])){
                         <select name="employeur_id" id="employeur_id">
                             <option value="">Votre entreprise</option>
                             <?php
-                                //on va parcourir la liste des entreprise envoye au niveau de l'index
-                                while($tab = mysqli_fetch_row($listeEmployeur)){
-                                
-                                    echo"<option value='$tab[0]'>$tab[2]</option>";
-                                }          
-                            ?>
+                           
+                           foreach($listeEmployeur as $l_employeur){   
+                       ?>
+                              
+                           //on va parcourir la liste de typeclient envoye au niveau de l'index
+                           <option value="<?= $l_employeur->id ?>"><?= $l_employeur->nom_employeur ?> </option>
+                       <?php      
+                           }          
+                          ?>
                         </select>
 
                     </div>
@@ -93,7 +101,7 @@ if(isset($_GET['ok'])){
 
                     <div>
                         <label for="">Salaire</label>
-                        <input type="text" name="salaire" id="salaire" placeholder="Salaire....." placeholder="salaire">
+                        <input type="text" name="salaire" id="salaire" value="" placeholder="Salaire....." placeholder="salaire">
                     </div>
 
                     <div>

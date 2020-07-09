@@ -33,12 +33,15 @@ if(isset($_GET['ok'])){
                             <option value="">Choisir client</option>
 
                             <?php
-                                //on va parcourir la liste de typeclient envoye au niveau de l'index
-                                while($tab = mysqli_fetch_row($listeClient)){
-                                
-                                    echo"<option value='$tab[0]'>$tab[2] $tab[1]</option>";
-                                }          
+                           
+                                foreach($listeClient as $l_client){   
                             ?>
+                                   
+                                //on va parcourir la liste de typeclient envoye au niveau de l'index
+                                <option value="<?= $l_client->id ?>"> <?= $l_client->prenom ?>  <?= $l_client->nom ?> </option>
+                            <?php      
+                                }          
+                               ?>
                         </select>
 
                     </div>
@@ -55,11 +58,12 @@ if(isset($_GET['ok'])){
                         <select name="type_compte_id" id="selectCompte" onchange="myFunction()">
                             <option value="">Choisir un type de compte</option>
                             <?php
-                                //on va parcourir la liste de typecompte envoye au niveau de l'index
-                                while($tab = mysqli_fetch_row($listeTypeCompte)){
-                                
-                                    echo"<option value='$tab[0]'>$tab[1]</option>";
-                                }          
+                                foreach($listeTypeCompte as $l_compte){   
+                            ?>
+                              
+                           <option value="<?= $l_compte->id ?>"><?= $l_compte->libelle ?> </option>
+                            <?php      
+                            }          
                             ?>
                         </select>
                     </div>
@@ -77,10 +81,12 @@ if(isset($_GET['ok'])){
                             <option value="">Votre agence</option>
 
                             <?php
-                                //on va parcourir la liste des agences
-                                while($tab = mysqli_fetch_row($listeAgence)){
-                                    echo"<option value='$tab[0]'>$tab[1]</option>";
-                                }          
+                                foreach($listeAgence as $l_agence){   
+                            ?>
+                              
+                           <option value="<?= $l_agence->id ?>"><?= $l_agence->nom ?> </option>
+                            <?php      
+                            }          
                             ?>
                         </select>
 
