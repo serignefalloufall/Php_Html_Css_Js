@@ -8,9 +8,8 @@
         <link rel="stylesheet" href="./../public/css/gestionClient.css">
         <link rel="stylesheet" href="./../public/css/gestionCompte.css">
 
-        <link rel="stylesheet" href="./public/css/menu.css">
-        <script src="/banqueProjectPhp/public/js/gestionClient.js"></script>
-        <script src="/banqueProjectPhp/public/js/gestionCompte.js"></script>
+        <script src="./../public/js/gestionClient.js"></script>
+        <script src="./../public/js/gestionCompte.js"></script>
         
         
     </head>

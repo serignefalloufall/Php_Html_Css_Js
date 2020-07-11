@@ -20,11 +20,12 @@ use src\model\ClientDB;
 
             $clientdb = new ClientDB();// l'objet $clientdb c pour acceder au methode qui se trouve class TestDB
 
+            // $clientdb = new ClientDB();// l'objet $clientdb c pour acceder au methode qui se trouve class TestDB
+            //$data['listeTypeClient'] = $clientdb->getListTypeClient();
+           
             if(isset($_POST['btnAjouter']))
             {
-                echo 1;
                 extract($_POST);
-                //var_dump($_POST);
 
                 if($_POST['type_client_id'] == '8')
                 {
@@ -40,56 +41,65 @@ use src\model\ClientDB;
 
                     $resultat = $clientdb->addEmployeur($employeurObject);
 
-                    return $this->view->load("client/add");
+                    $data['ok'] = $resultat;
+
+                    return $this->view->load("client/add", $data);
 
                 }else if($_POST['type_client_id'] == '6')
                 {
-                    //6 represente typeclient salarie au niveau de la base
+                     //6 represente typeclient salarie au niveau de la base
 
-                    $clientObject->setNom($nom);
+                     $clientObject->setNom($nom);
 
-                    $clientObject->setPrenom($prenom);
+                     $clientObject->setPrenom($prenom);
+ 
+                     $clientObject->setAdresse($adresse);
+ 
+                     $clientObject->setTel($tel);
+ 
+                     $clientObject->setEmail($email);
+ 
+                     $clientObject->setSalaire($salaire);
+ 
+                     $clientObject->setProfession($profession);
+ 
+                     $clientObject->setType_client_id($type_client_id);
+ 
+                     $clientObject->setEmployeur_id($employeur_id);
+ 
+                     $resultat = $clientdb->addClientSalarie($clientObject);
 
-                    $clientObject->setAdresse($adresse);
+                     $data['ok'] = $resultat;
 
-                    $clientObject->setTel($tel);
+                     return $this->view->load("client/add", $data);
 
-                    $clientObject->setEmail($email);
-
-                    $clientObject->setSalaire($salaire);
-
-                    $clientObject->setProfession($profession);
-
-                    $clientObject->setType_client_id($type_client_id);
-
-                    $clientObject->setEmployeur_id($employeur_id);
-
-                    $resultat = $clientdb->addClientSalarie($clientObject);
-
-                    return $this->view->load("client/add");
-   
                 }else if($_POST['type_client_id'] == '7')
                 {
-                    //7 represente typeclient non salarie au niveau de la base
+                     //7 represente typeclient non salarie au niveau de la base
 
-                    $clientObject->setNom($nom);
+                     $clientObject->setNom($nom);
 
-                    $clientObject->setPrenom($prenom);
+                     $clientObject->setPrenom($prenom);
+ 
+                     $clientObject->setAdresse($adresse);
+ 
+                     $clientObject->setTel($tel);
+ 
+                     $clientObject->setEmail($email);
+ 
+                     $resultat = $clientdb->addClientNonSalarie($clientObject);
 
-                    $clientObject->setAdresse($adresse);
+                     $data['ok'] = $resultat;
 
-                    $clientObject->setTel($tel);
-
-                    $clientObject->setEmail($email);
-
-                    $resultat = $clientdb->addClientNonSalarie($clientObject);
-
-                    return $this->view->load("client/add");
-
-
+                     return $this->view->load("client/add", $data);
                 }
-            } 
-            $this->view->load("client/add");
+              
+            }else{
+
+                return $this->view->load("client/add", $data);
+
+            }
+           
         }  
     }
 ?>

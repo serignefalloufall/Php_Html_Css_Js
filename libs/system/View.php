@@ -48,7 +48,7 @@ namespace libs\system;
                     
                     if(file_exists($file))
                     {
-                        $data  = $args[1];//represente la 2em prams
+                        $data = $args[1];//represente la 2em prams
 
                         require_once $file;//on inclut ce $file
                     }

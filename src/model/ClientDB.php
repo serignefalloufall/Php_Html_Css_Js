@@ -4,6 +4,10 @@ namespace src\model;
 
 use libs\system\Model;
 
+use src\entities\Client;
+
+use src\entities\Employeur;
+
 class ClientDB extends Model{ //extands c pour definir l'heritage en php
 
     public function __construct(){
@@ -61,7 +65,7 @@ class ClientDB extends Model{ //extands c pour definir l'heritage en php
     function getListTypeClient(){
 
         $sql = "SELECT * FROM type_client";
-       
+        
         if($this->db != null){// si la connexion passe
     
                 $rep=$this->db->query($sql)->fetchAll();//on execute la requete
@@ -80,7 +84,7 @@ class ClientDB extends Model{ //extands c pour definir l'heritage en php
             $sql = "SELECT * FROM client";
             if($this->db != null){// si la connexion passe
     
-                return $this->db->query($sql);//on execute la requete
+                return $this->db->query($sql)->fetchAll();//on execute la requete
     
             }else{
     
@@ -93,7 +97,7 @@ class ClientDB extends Model{ //extands c pour definir l'heritage en php
             $sql = "SELECT * FROM employeur";
             if($this->db != null){// si la connexion passe
     
-                return $this->db->query($sql);//on execute la requete
+                return $this->db->query($sql)->fetchAll();//on execute la requete
     
             }else{
     

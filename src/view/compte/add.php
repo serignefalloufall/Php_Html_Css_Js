@@ -21,7 +21,7 @@ if(isset($_GET['ok'])){
  
     <div class="contenue">
         <div class="error" id="message_error"></div>
-        <form action="<?php echo $base_url ?>controller/CompteController.php" method="POST" class="formClient" id="formClient">
+        <form action="CompteController/add" method="POST" class="formClient" id="formClient">
 
             <fieldset class="fieldset">
                 <legend class="legend">Rechercher client</legend>

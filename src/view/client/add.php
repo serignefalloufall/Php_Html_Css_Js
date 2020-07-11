@@ -6,6 +6,21 @@
     <title>Gestion Client</title>
 </head>
 <body>
+<?php
+
+if(isset($listeTypeClient)){
+    //print_r($data);
+      //print_r($tclient->libelle);
+    foreach($listeTypeClient as $tclient){?>
+      
+       <p> <?= $tclient->libelle ?></p>
+       <?php
+    }
+}else{
+    echo "liste vide";
+}
+die();
+?>
 
 <?php
 if(isset($_GET['ok'])){

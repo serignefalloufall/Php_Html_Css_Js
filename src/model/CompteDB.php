@@ -1,9 +1,10 @@
 <?php 
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/mes_projets/banqueProjectPhp/model/DB.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/mes_projets/banqueProjectPhp/entities/Compte.php';
+namespace src\model;
 
-//on inclure la class DB et Test pour qu'il soit visible a cette class
+use libs\system\Model;
+
+use src\entities\Compte;
 
 class CompteDB extends DB{ //extands c pour definir l'heritage en php
 
@@ -64,7 +65,7 @@ class CompteDB extends DB{ //extands c pour definir l'heritage en php
         $sql = "SELECT * FROM type_client";
         if($this->db != null){// si la connexion passe
     
-                return $this->db->query($sql);//on execute la requete
+                return $this->db->query($sql)->fetchAll();//on execute la requete
     
             }else{
     
@@ -78,7 +79,7 @@ class CompteDB extends DB{ //extands c pour definir l'heritage en php
             $sql = "SELECT * FROM agence";
             if($this->db != null){// si la connexion passe
     
-                return $this->db->query($sql);//on execute la requete
+                return $this->db->query($sql)->fetchAll();//on execute la requete
     
             }else{
     
@@ -91,7 +92,7 @@ class CompteDB extends DB{ //extands c pour definir l'heritage en php
             $sql = "SELECT * FROM type_compte";
             if($this->db != null){// si la connexion passe
     
-                return $this->db->query($sql);//on execute la requete
+                return $this->db->query($sql)->fetchAll();//on execute la requete
     
             }else{
     
