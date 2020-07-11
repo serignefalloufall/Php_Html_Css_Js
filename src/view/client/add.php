@@ -22,7 +22,7 @@ if(isset($_GET['ok'])){
  
     <div class="contenue">
         <div class="error" id="message_error"></div>
-        <form action="<?php echo $base_url ?>controller/ClientController.php" method="POST" class="formClient" id="formClient" onsubmit="return validationClient()">
+        <form action="ClientController/add" method="POST" class="formClient" id="formClient" onsubmit="return validationClient()">
 
             <fieldset class="fieldset">
                 <legend class="legend">Gestion des clients:</legend>

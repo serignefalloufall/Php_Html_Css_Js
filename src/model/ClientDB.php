@@ -1,12 +1,10 @@
 <?php 
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/mes_projets/banqueProjectPhp/model/DB.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/mes_projets/banqueProjectPhp/entities/Employeur.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/mes_projets/banqueProjectPhp/entities/Client.php';
+namespace src\model;
 
-//on inclure la class DB et Test pour qu'il soit visible a cette class
+use libs\system\Model;
 
-class ClientDB extends DB{ //extands c pour definir l'heritage en php
+class ClientDB extends Model{ //extands c pour definir l'heritage en php
 
     public function __construct(){
         parent::__construct();//pour faire appelle a notre constructeur parent qui se trouve dans la classe DB

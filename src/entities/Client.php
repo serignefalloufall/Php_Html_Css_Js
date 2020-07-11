@@ -1,4 +1,5 @@
 <?php
+namespace src\entities;
 
     class Client
     {
