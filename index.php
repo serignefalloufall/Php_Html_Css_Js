@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="public/css/menu.css">
+
 <?php
 
 require_once "public/web/menu.php";
+
 use libs\system\Bootstrap;
 include_once "config/autoload.php";
 

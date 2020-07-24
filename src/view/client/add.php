@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-
+/*
 if(isset($listeTypeClient)){
     //print_r($data);
       //print_r($tclient->libelle);
@@ -19,7 +19,7 @@ if(isset($listeTypeClient)){
 }else{
     echo "liste vide";
 }
-die();
+die();*/
 ?>
 
 <?php
@@ -49,8 +49,8 @@ if(isset($_GET['ok'])){
                             <option value="">Choisir un type de client</option>
 
                             <?php
-                            //  var_dump($listeTypeClient);
-                            //  die();
+
+
                              
                                 foreach($listeTypeClient as $l_typeClient){   
                             ?>
@@ -61,6 +61,8 @@ if(isset($_GET['ok'])){
                                 }          
                                ?>
                         </select>
+
+                        
 
                     </div>
             

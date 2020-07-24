@@ -4,6 +4,7 @@ namespace src\controller; // ici on a definit un namespace
 use libs\system\Controller;
 use src\entities\Compte;
 use src\model\CompteDB;
+use src\model\ClientDB;
 
    class CompteController extends Controller
    {
@@ -16,6 +17,15 @@ use src\model\CompteDB;
             $compteObject = new Compte();//ici on cree un objet 
 
             $comptedb = new CompteDB();// l'objet $comptedb c pour acceder au methode qui se trouve class TestDB
+            $clientdb = new ClientDB();
+            $data['listeClient'] = $clientdb->getListClient();
+            $data['listeTypeCompte'] = $comptedb->getListTypeComte();
+            $data['listeAgence'] = $comptedb->getListAgence();
+            
+            //parametrage
+            $data['today'] = date("d/m/y"); 
+            $data['numcompte'] = 'Cmpt-'.$data['today']; 
+            $data['cleRip'] = 'Cle-rip-'.$data['today'] ; 
 
             if(isset($_POST['btnAjouter']))
             {
@@ -95,7 +105,7 @@ use src\model\CompteDB;
               
             }else{
 
-                  return $this->view->load("client/add", $data);
+                  return $this->view->load("compte/add", $data);
 
             }
            

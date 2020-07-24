@@ -30,15 +30,13 @@ namespace libs\system;
                         // echo 1;
                         // die();
                         // echo __DIR__;
-                        require_once "public/web/menu.php";
+                       // require_once "public/web/menu.php";
                         include_once $file;//on inclut ce $file
                     }
                     else{
 
                         die($file." n'existe pas comme view");//on affiche une message et arrete l script
                     }
-
-                 
 
                     break;
 
@@ -49,6 +47,7 @@ namespace libs\system;
                     if(file_exists($file))
                     {
                         $data = $args[1];//represente la 2em prams
+                        extract($data);
 
                         require_once $file;//on inclut ce $file
                     }

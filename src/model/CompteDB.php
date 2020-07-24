@@ -6,7 +6,8 @@ use libs\system\Model;
 
 use src\entities\Compte;
 
-class CompteDB extends DB{ //extands c pour definir l'heritage en php
+
+class CompteDB extends Model{ //extands c pour definir l'heritage en php
 
     public function __construct(){
         parent::__construct();//pour faire appelle a notre constructeur parent qui se trouve dans la classe DB

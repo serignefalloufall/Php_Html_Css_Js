@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="./../public/css/gestionClient.css">
         <link rel="stylesheet" href="./../public/css/gestionCompte.css">
 
-        <script src="./../public/js/gestionClient.js"></script>
-        <script src="./../public/js/gestionCompte.js"></script>
+        <script src="./../public/js/gestionClient.js" type="text/javascript"></script>
+        <script src="./../public/js/gestionCompte.js" type="text/javascript"></script>
         
         
     </head>
@@ -17,8 +17,8 @@
         <nav>
             <ul class="menu">
                 <li class="logo"><a href="#">La banque du peuple</a></li>
-                <li class="item"><a href="Client/add">Gestion des clients</a></li>
-                <li class="item"><a href="Compte/add">Gestion des comptes client</a></li>
+                <li class="item"><a href="http://localhost/mes_projets/banqueProjectPhp/Client/add">Gestion des clients</a></li>
+                <li class="item"><a href="http://localhost/mes_projets/banqueProjectPhp/Compte/add">Gestion des comptes client</a></li>
             </ul>
         </nav>
         

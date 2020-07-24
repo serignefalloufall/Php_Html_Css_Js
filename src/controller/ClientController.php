@@ -20,8 +20,8 @@ use src\model\ClientDB;
 
             $clientdb = new ClientDB();// l'objet $clientdb c pour acceder au methode qui se trouve class TestDB
 
-            // $clientdb = new ClientDB();// l'objet $clientdb c pour acceder au methode qui se trouve class TestDB
-            //$data['listeTypeClient'] = $clientdb->getListTypeClient();
+            $data['listeTypeClient'] = $clientdb->getListTypeClient();
+            $data['listeEmployeur'] = $clientdb->getListEmployeur();
            
             if(isset($_POST['btnAjouter']))
             {
