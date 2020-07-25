@@ -26,7 +26,8 @@ use src\model\ClientDB;
             if(isset($_POST['btnAjouter']))
             {
                 extract($_POST);
-
+                //var_dump($_POST);
+                //die();
                 if($_POST['type_client_id'] == '8')
                 {
                     //8 represente typeclient entreprise au niveau de la base
@@ -42,6 +43,8 @@ use src\model\ClientDB;
                     $resultat = $clientdb->addEmployeur($employeurObject);
 
                     $data['ok'] = $resultat;
+                    //echo $data['ok'];
+                    //die();
 
                     return $this->view->load("client/add", $data);
 

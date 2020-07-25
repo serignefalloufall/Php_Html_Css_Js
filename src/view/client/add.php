@@ -23,8 +23,8 @@ die();*/
 ?>
 
 <?php
-if(isset($_GET['ok'])){
-    if($_GET['ok'] == 1){
+if(isset($ok)){
+    if($ok == 1){
         
         echo "<div style='margin-top: 410px; font-size: 35px; color:#02a1a1; margin-left: 130px;'>Client inseré avec succès</div>";
     }else{
@@ -37,7 +37,7 @@ if(isset($_GET['ok'])){
  
     <div class="contenue">
         <div class="error" id="message_error"></div>
-        <form action="ClientController/add" method="POST" class="formClient" id="formClient" onsubmit="return validationClient()">
+        <form action="http://localhost/mes_projets/banqueProjectPhp/Client/add" method="POST" class="formClient" id="formClient" onsubmit="return validationClient()">
 
             <fieldset class="fieldset">
                 <legend class="legend">Gestion des clients:</legend>

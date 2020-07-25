@@ -8,10 +8,10 @@
 <body>
 
 <?php
-if(isset($_GET['ok'])){
-    if($_GET['ok'] == 1){
+if(isset($ok)){
+    if($ok == 1){
         
-        echo "<div style='margin-top: 410px; font-size: 35px; color:#02a1a1; margin-left: 130px;'>Compte inseré avec succès</div>";
+        echo "<div style='margin-top: 410px; font-size: 35px; color:#02a1a1; margin-left: 130px;'>Client inseré avec succès</div>";
     }else{
         echo "<div style='margin-top: 50px; font-size: 35px; color:red; margin-left: 130px;'>Erreur d'insertion</div>";
  
@@ -21,7 +21,7 @@ if(isset($_GET['ok'])){
  
     <div class="contenue">
         <div class="error" id="message_error"></div>
-        <form action="CompteController/add" method="POST" class="formClient" id="formClient">
+        <form action="http://localhost/mes_projets/banqueProjectPhp/Compte/add" method="POST" class="formClient" id="formClient">
 
             <fieldset class="fieldset">
                 <legend class="legend">Rechercher client</legend>

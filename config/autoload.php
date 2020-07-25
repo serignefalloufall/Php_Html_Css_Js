@@ -13,9 +13,9 @@
             
             //echo $class;
             $racine= __DIR__.$class.".php"; // le directory de la classe
-           
+          
             $directory=str_replace("\\","/",$racine); // chqnger le \ par /
-           
+            
             $new_directory = str_replace("config","",$directory);
             
             if(file_exists($new_directory)){ // tester si le directory config

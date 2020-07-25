@@ -17,7 +17,7 @@ class ClientDB extends Model{ //extands c pour definir l'heritage en php
     function addEmployeur(Employeur $employeur){//on donne a notre fonction comme prametre un objet
         
         $sql = "INSERT INTO employeur(numIdentification, raisonSocial, nom_employeur, adresse_employeur)
-            VALUES('".$employeur->getNumIdentification()."', '".$employeur->getRaisonSocial."', '".$employeur->getNom_employeur."', '".$employeur->getAdresse_employeur."')";
+            VALUES('".$employeur->getNumIdentification()."', '".$employeur->getRaisonSocial()."', '".$employeur->getNom_employeur()."', '".$employeur->getAdresse_employeur()."')";
 
         if($this->db != null){// si la connexion passe
     
