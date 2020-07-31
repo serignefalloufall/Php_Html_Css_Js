@@ -1,7 +1,9 @@
 <?php
 namespace libs\system;
 
-    class Model
+use PDOException;
+
+class Model
     { 
         protected $db;// propriete ou attribut d'une class
    
